@@ -4,6 +4,7 @@ import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaServer} from "react
 import {SiFirebase, SiMongodb, SiNextdotjs, SiTailwindcss} from "react-icons/si"
 
 import { motion } from "framer-motion"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 //about
 const about = {
@@ -148,10 +149,27 @@ const skills = {
 }
 const ResumePage = () => {
     return (
-        <motion.div initial={{opacity : 0}} animate={{opacity : 1}}>
-            <h1>
-               
-            </h1>
+        <motion.div initial={{opacity : 0}} animate={{opacity : 1, transition : {
+            delay: 2.4, duration: 0.4, ease: "easeIn"
+        }}}
+        className= "min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
+        >
+            <div className="container mx-auto">
+                <Tabs defaultValue="Experience" className="flex flex-col xl:flex-row gap-[60px]">
+                    <TabsList className="flex flex-col gap-6 w-ful max-w-[380px] mx-auto xl:mx-0">
+                        <TabsTrigger value="experience">Experience</TabsTrigger>
+                        <TabsTrigger value="education">Education</TabsTrigger>
+                        <TabsTrigger value="skills">Skills</TabsTrigger>
+                        <TabsTrigger value="about">About Me</TabsTrigger>
+                    </TabsList>
+
+                    {/* content */}
+                    <div className="min-h-[70vh]  w-full">
+                        {/* experience */}
+                        <TabsContent value="experience" className="w-full">experience</TabsContent>
+                    </div>
+                </Tabs>
+            </div>
         </motion.div>
     );
 };
