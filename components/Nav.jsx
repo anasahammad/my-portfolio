@@ -14,8 +14,8 @@ const navLinks = [
         path: "/resume"
     },
     {
-        title: "work",
-        path: "/work"
+        title: "projects",
+        path: "/projects"
     },
     {
         title: "contact",

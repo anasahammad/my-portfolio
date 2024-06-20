@@ -185,7 +185,7 @@ const ResumePage = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="Experience"
+          defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col gap-6 w-ful max-w-[380px] mx-auto xl:mx-0">
