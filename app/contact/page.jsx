@@ -29,18 +29,7 @@ const ContactPage = () => {
 
     const handleMessage = async (event)=>{
         event.preventDefault()
-        // const form = event.target;
-
-        // const firstName = form.firstname.value;
-        // const lastName = form.lastname.value;
-        // const email = form.email.value;
-        // const phone = form.phone.value;
-        // const message = form.message.value;
-
-        // const contactMessage = {
-        //     firstName, lastName, email, phone, message
-        // }
-
+      
         const formData = new FormData(event.target);
 
           formData.append("access_key", "7087db30-0abd-41db-98ce-0107817cb29a");
@@ -73,7 +62,7 @@ const ContactPage = () => {
                 <div className="xl:w-[54%] order-2 xl:order-none">
                     <form onSubmit={handleMessage} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                         <h3 className="text-4xl text-accent">Let's work together</h3>
-                        <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut tenetur quod saepe beatae itaque.</p>
+                        <p className="text-white/60">Reach out for collaborations, projects, or questions. Fill out the form below, and I’ll respond promptly.</p>
 
                         {/* input */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

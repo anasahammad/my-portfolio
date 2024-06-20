@@ -14,51 +14,15 @@ import SliderBtn from "@/components/SliderBtn";
 
 
 
-const projects = [
-    {
-        num: "01",
-        category : "frontend",
-        title : "project 1",
-        description : "akdjfkdjfkald jfkdjfkasljfkld jaojedkfjdk kadjfkdjfkd dfdkfakfkdj",
-        stack : [{name: "Html 5"}, {name : "CSS 3"}, {name : "JavaScript"}, {name : "React.js"}],
-        image : "/assets/assets/work/thumb1.png",
-        live: "",
-        github: ""
-    },
-    {
-        num: "02",
-        category : "frontend",
-        title : "project 1",
-        description : "akdjfkdjfkald jfkdjfkasljfkld jaojedkfjdk kadjfkdjfkd dfdkfakfkdj",
-        stack : [{name: "Html 5"}, {name : "CSS 3"}, {name : "JavaScript"}, {name : "React.js"}],
-        image : "/assets/assets/work/thumb2.png",
-        live: "",
-        github: ""
-    },
-    {
-        num: "01",
-        category : "frontend",
-        title : "project 1",
-        description : "akdjfkdjfkald jfkdjfkasljfkld jaojedkfjdk kadjfkdjfkd dfdkfakfkdj",
-        stack : [{name: "Html 5"}, {name : "CSS 3"}, {name : "JavaScript"}, {name : "React.js"}],
-        image : "/assets/assets/work/thumb1.png",
-        live: "",
-        github: ""
-    },
-    {
-        num: "02",
-        category : "frontend",
-        title : "project 1",
-        description : "akdjfkdjfkald jfkdjfkasljfkld jaojedkfjdk kadjfkdjfkd dfdkfakfkdj",
-        stack : [{name: "Html 5"}, {name : "CSS 3"}, {name : "JavaScript"}, {name : "React.js"}],
-        image : "/assets/assets/work/thumb2.png",
-        live: "",
-        github: ""
-    },
-]
 
 
 
+
+
+export const metadata = {
+    title: "Project",
+    description: "Anas Ahammad Sarker a Webdeveloper",
+  };
 const Projects = () => {
 
     const [project, setProject] = useState(projects[0])
@@ -73,7 +37,7 @@ const Projects = () => {
         className="min-h-[80vh] flex flex-col justify-center items-center py-12 xl:py-0 "
         >
             <div className="container mx-auto">
-                <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+                <div className="flex flex-col xl:flex-row xl:gap-[60px]">
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* outline number */}
@@ -131,7 +95,7 @@ const Projects = () => {
 
                     </div>
 
-                    <div className="w-full xl:w-[50%]">
+                    <div className="w-full xl:w-[35%]">
                         <Swiper spaceBetween={30}  slidesPerView={1} className="xl:h-[520px] mb-12"
                         onSlideChange={handleSlideChange}
                         >
@@ -145,7 +109,7 @@ const Projects = () => {
 
                                         {/* image */}
                                         <div className="relative w-full h-full">
-                                            <Image alt={project.title} src={project.image} fill className="contain-object"/>
+                                            <Image alt={project.title} src={project.image} fill className="contain-layout"/>
                                         </div>
                                     </div>
                                 </SwiperSlide>
