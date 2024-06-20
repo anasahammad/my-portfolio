@@ -1,10 +1,10 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
-const JetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800"], variable : '--font-jetbrainsMone' });
+const RobotoMono = Roboto_Mono({ subsets: ["latin"], weight: [ "400", "500",  "700"], variable : '--font-jetbrainsMone' });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={JetBrainsMono.variable}>
+      <body className={RobotoMono.variable}>
         <Header/>
         <StairTransition/>
         <PageTransition>
