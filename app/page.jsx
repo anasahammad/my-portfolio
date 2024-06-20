@@ -3,6 +3,7 @@ import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {FiDownload} from "react-icons/fi"
 
 export default function Home() {
@@ -20,13 +21,15 @@ export default function Home() {
 
             {/* button  and social links */}
         <div className="flex flex-col xl:flex-row gap-8 items-center">
-          <Button variant="outline"
+         <Link href="/Anas Resume.pdf" download={true}>
+         <Button variant="outline"
             size="lg"
             className="flex gap-2 items-center uppercase"
           >
             <span>Download CV</span>
             <FiDownload className="text-xl"/>
           </Button>
+         </Link>
 
           <div className="mb-8 xl:mb-0">
             <SocialLinks containerStyles="flex gap-6"
