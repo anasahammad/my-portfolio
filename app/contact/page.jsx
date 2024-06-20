@@ -26,6 +26,43 @@ const info = [
     },
 ]
 const ContactPage = () => {
+
+    const handleMessage = async (event)=>{
+        event.preventDefault()
+        // const form = event.target;
+
+        // const firstName = form.firstname.value;
+        // const lastName = form.lastname.value;
+        // const email = form.email.value;
+        // const phone = form.phone.value;
+        // const message = form.message.value;
+
+        // const contactMessage = {
+        //     firstName, lastName, email, phone, message
+        // }
+
+        const formData = new FormData(event.target);
+
+          formData.append("access_key", "7087db30-0abd-41db-98ce-0107817cb29a");
+
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: json
+          });
+          const result = await response.json();
+          if (result.success) {
+              console.log(result);
+          }
+        
+        
+    }
     return (
         <motion.section  initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}}}
         className="py-6"
@@ -34,23 +71,23 @@ const ContactPage = () => {
             <div className="flex flex-col xl:flex-row gap-[30px] ">
                 {/* form */}
                 <div className="xl:w-[54%] order-2 xl:order-none">
-                    <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+                    <form onSubmit={handleMessage} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                         <h3 className="text-4xl text-accent">Let's work together</h3>
                         <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut tenetur quod saepe beatae itaque.</p>
 
                         {/* input */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <Input type="firstname" placeholder="First name"/>
-                            <Input type="lasttname" placeholder="Last name"/>
-                            <Input type="email" placeholder="Email address"/>
-                            <Input type="phone" placeholder="Phone number"/>
+                            <Input name="firstname" type="firstname" placeholder="First name"/>
+                            <Input name="lastname" type="lastname" placeholder="Last name"/>
+                            <Input name="email" type="email" placeholder="Email address"/>
+                            <Input name="phone" type="phone" placeholder="Phone number"/>
                         </div>
 
                         {/* Text Area */}
-                        <Textarea className="h-[200px] " placeholder="Type your message here.."/>
+                        <Textarea name="message" className="h-[200px] " placeholder="Type your message here.."/>
 
                         {/* button */}
-                        <Button size="md" className="max-w-40">Send Message</Button>
+                        <Button type="submit" size="md" className="max-w-40">Send Message</Button>
                     </form>
                 </div>
 
