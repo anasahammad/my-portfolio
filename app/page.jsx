@@ -1,6 +1,7 @@
 
 import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import {FiDownload} from "react-icons/fi"
 
@@ -43,6 +44,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <Stats/>
    </section>
   );
 }
