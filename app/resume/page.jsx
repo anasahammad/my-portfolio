@@ -8,6 +8,7 @@ import {
   FaFigma,
   FaNodeJs,
   FaServer,
+  FaStripe,
 } from "react-icons/fa";
 import {
   SiFirebase,
@@ -25,11 +26,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const about = {
   title: "About Me",
   description:
-    " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat veritatis perferendis ipsam qui soluta in sequi amet.",
+    " I am Anas Ahammad Sarker, a proactive web developer proficient in React.js and Next.js. With expertise in MongoDB, Firebase, Express.js, and Node.js, I craft dynamic web applications and am available for freelance projects.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Anas Ahammad",
+      fieldValue: "Anas Ahammad Sarker",
     },
     {
       fieldName: "Phone",
@@ -55,6 +56,10 @@ const about = {
       fieldName: "Language",
       fieldValue: "Bengali, English",
     },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Bangladeshi",
+    },
   ],
 };
 
@@ -64,7 +69,7 @@ const experience = {
   icon: "/assets/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat veritatis perferendis ipsam qui soluta in sequi amet.",
+    "I am a dedicated web developer specializing in frontend technologies, with extensive experience in React.js and Next.js. My skills also include a solid understanding of MongoDB, Firebase, Express.js, and Node.js, allowing me to create dynamic and efficient web applications.",
   items: [
     {
       company: "Rowshan Ara School",
@@ -72,7 +77,7 @@ const experience = {
       duration: "2023 - present",
     },
     {
-      company: "Janina",
+      company: "Comming soon...",
       position: "Full-Stuck Developer",
       duration: "2024 - present",
     },
@@ -84,7 +89,7 @@ const education = {
   icon: "/assets/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat veritatis perferendis ipsam qui soluta in sequi amet.",
+    "Currently pursuing BSS Hons in Economics at Govt. Tolaram College (2023-2027). Completed Full Stack Web Development at Programming Hero (2024) and Responsive Web Design at Free CodeCamp (2023).",
   items: [
     {
       institution: "Programming Hero",
@@ -112,7 +117,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat veritatis perferendis ipsam qui soluta in sequi amet.",
+    "I am a dedicated web developer specializing in frontend technologies, with extensive experience in React.js and Next.js. My skills also include a solid understanding of MongoDB, Firebase, Express.js, and Node.js, allowing me to create dynamic and efficient web applications.",
   skillLists: [
     {
       icon: <FaHtml5 />,
@@ -157,6 +162,10 @@ const skills = {
     {
       icon: <FaFigma />,
       name: "figma",
+    },
+    {
+      icon: <FaStripe />,
+      name: "stripe",
     },
   ],
 };
@@ -273,9 +282,23 @@ const ResumePage = () => {
                 </ul>
             </div>
             </TabsContent>
+
             {/* about */}
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px] ">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6  mx-auto xl:mx-0 ">
+                    {about.info.map((item, idx)=>{
+                        return (
+                            <li key={idx} className="flex justify-center items-center xl:justify-start gap-4">
+                                <span className="text-white/60">{item.fieldName}</span>
+                                <span className="text-xl ">{item.fieldValue}</span>
+                            </li>
+                        )
+                    })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
