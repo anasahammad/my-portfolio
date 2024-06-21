@@ -10,11 +10,10 @@ const Photo = () => {
             >
                 {/* Image */}
                 <motion.div
-                
                 initial={{opacity : 0}}
             animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeInOut"}}}
                 className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
-                    <Image src="/assets/assets/photo.png" alt="Anas" priority quality={100} fill className="object-contain" />
+                    <Image src="/photo.png" alt="Anas" priority quality={100} fill className="object-contain" />
                 </motion.div>
 
                

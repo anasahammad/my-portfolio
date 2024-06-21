@@ -7,6 +7,7 @@ import {motion} from "framer-motion"
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Swal from "sweetalert2";
 
 const info = [
     {
@@ -48,6 +49,15 @@ const ContactPage = () => {
           const result = await response.json();
           if (result.success) {
               console.log(result);
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: `${event.target.firstname.value}! Thank you for messaging me.`,
+                showConfirmButton: false,
+                timer: 1500
+              });
+
+              event.target.reset()
           }
         
         
@@ -66,10 +76,10 @@ const ContactPage = () => {
 
                         {/* input */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <Input name="firstname" type="firstname" placeholder="First name"/>
-                            <Input name="lastname" type="lastname" placeholder="Last name"/>
-                            <Input name="email" type="email" placeholder="Email address"/>
-                            <Input name="phone" type="phone" placeholder="Phone number"/>
+                            <Input required name="firstname" type="firstname" placeholder="First name"/>
+                            <Input required name="lastname" type="lastname" placeholder="Last name"/>
+                            <Input required name="email" type="email" placeholder="Email address"/>
+                            <Input required name="phone" type="phone" placeholder="Phone number"/>
                         </div>
 
                         {/* Text Area */}
