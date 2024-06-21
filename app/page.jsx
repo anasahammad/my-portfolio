@@ -12,7 +12,7 @@ export default function Home() {
     <div className="container mx-auto h-full">
       <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
         {/* Text info */}
-        <div className="text-center xl:text-left order-2 xl:order-none">
+        <div className="text-center xl:text-left order-2 ">
           <span className="text-xl">Web Depeloper</span>
           <h1 className="h1 mb-6">
             Hello I'am <br /> <span className="text-accent">Anas Ahammad</span>
