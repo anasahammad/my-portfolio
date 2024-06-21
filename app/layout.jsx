@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={RobotoMono.variable}>
         <Header/>
-        <StairTransition/>
+        {/* <StairTransition/> */}
         <PageTransition>
 
         {children}
