@@ -49,7 +49,7 @@ const about = {
       fieldValue: "B(+v) positive",
     },
     {
-      fieldName: "Freelance",
+      fieldName: "Remote",
       fieldValue: "Available",
     },
     {
@@ -181,7 +181,7 @@ const ResumePage = () => {
           ease: "easeIn",
         },
       }}
-      className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
+      className="min-h-[80vh] lg:mb-10 flex justify-center items-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
