@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import Footer from "@/components/Footer";
 
 const RobotoMono = Roboto_Mono({ subsets: ["latin"], weight: [ "400", "500",  "700"], variable : '--font-jetbrainsMone' });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
 
         {children}
         </PageTransition>
+        <Footer/>
         </body>
     </html>
   );
