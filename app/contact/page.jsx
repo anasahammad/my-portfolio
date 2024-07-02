@@ -52,7 +52,7 @@ const ContactPage = () => {
               Swal.fire({
                 position: "top-center",
                 icon: "success",
-                title: `${event.target.firstname.value}! Thank you for messaging me.`,
+                title: `${event.target.firstname.value} ${event.target.lastname.value} ! Thank you for messaging me.`,
                 showConfirmButton: false,
                 timer: 1500
               });

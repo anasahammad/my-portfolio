@@ -1,5 +1,6 @@
 
 import Photo from "@/components/Photo";
+import Services from "@/components/Services";
 import SocialLinks from "@/components/SocialLinks";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ export default function Home() {
 
             {/* button  and social links */}
         <div className="flex flex-col xl:flex-row gap-8 items-center">
-         <Link href="/Anas Resume.pdf" download={true}>
+         <Link target="blank" href="/Anas Resume.pdf" download={true}>
          <Button variant="outline"
             size="lg"
             className="flex gap-2 items-center uppercase"
@@ -48,6 +49,8 @@ export default function Home() {
       </div>
     </div>
     <Stats/>
+
+    <Services/>
    </section>
   );
 }

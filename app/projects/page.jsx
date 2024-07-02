@@ -102,10 +102,10 @@ const Projects = () => {
                         <p className="text-white/60">{project.description}</p>
 
                         {/* stack */}
-                        <ul className="flex gap-4">
+                        <ul className="grid grid-cols-3 lg:grid-cols-4 gap-2">
                             {project.stack.map((item, idx)=> {
                                 return <li key={idx}
-                                className="text-xl text-accent"
+                                className="text-xl   text-accent"
                                 >{item.name}
                                  {idx !==project.stack.length -1 && ","}
                                 </li>
