@@ -17,7 +17,7 @@ const Footer = () => {
            </div>
             
             
-           <h3 className="text-accent text-center"><span className='text-xl'>©</span>2024 All Rights Reserved by Anas Ahammad Sarker </h3>
+           <h3 className="text-accent text-center"><span className='text-xl'>©</span>{new Date().getFullYear()} All Rights Reserved by Anas Ahammad Sarker </h3>
         
         </footer>
     );

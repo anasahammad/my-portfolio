@@ -19,15 +19,25 @@ const projects = [
     {
         num: "01",
         category : "Full-stack",
+        title : "Exclusive",
+        description : "Exclusive is an E-commerce website.",
+        stack : [{name: "React.js"},{name : "TypeScript"}, {name : "Node.js"}, {name : "MongoDB"}, {name : "Express.js"}, {name: "Firebase"}],
+        image : "/assets/assets/work/projectE.png",
+        live: "https://exclusive-1.web.app/",
+        github: "https://github.com/anasahammad/exclusive"
+    },
+    {
+        num: "02",
+        category : "Full-stack",
         title : "Tourio",
         description : "This is a tour guide website of Bangladesh.",
         stack : [{name: "React.js"}, {name : "Node.js"}, {name : "MongoDB"}, {name : "Express.js"}, {name: "Firebase"}],
         image : "/assets/assets/work/project2.jpeg",
         live: "https://tourio-a04d8.web.app/",
-        github: ""
+        github: "https://github.com/anasahammad/Tourio"
     },
     {
-        num: "02",
+        num: "03",
         category : "Full-stack",
         title : "JobQuest",
         description : "Explore job listings categorized as On-site, Remote, Hybrid, and Part-time, tailored to your preferences.",
@@ -37,7 +47,7 @@ const projects = [
         github: "https://github.com/anasahammad/JobQuest"
     },
     {
-        num: "03",
+        num: "04",
         category : "Full-stack",
         title : "TropiTour",
         description : "TropiTour provides a curated list of tourist spots across Southeast Asia, allowing users to discover hidden gems and popular destinations in the region.",
@@ -47,7 +57,7 @@ const projects = [
         github: "https://github.com/anasahammad/TropiTour"
     },
     {
-        num: "04",
+        num: "05",
         category : "frontend",
         title : "HeavenHome",
         description : "HeavenHome, your go-to platform for browsing and discovering real estate properties for rent or sale.",
@@ -57,7 +67,7 @@ const projects = [
         github: "https://github.com/anasahammad/heaven-home"
     },
     {
-        num: "05",
+        num: "06",
         category : "frontend",
         title : "Book Vibe",
         description : "Book Vibe is a web application designed to help book enthusiasts discover new books, connect with authors, and share their reading experiences.",
@@ -66,6 +76,7 @@ const projects = [
         live: "https://bookvibe-by-anas.netlify.app/",
         github: "https://github.com/anasahammad/Book-vibe?tab=readme-ov-file#livesiteurl"
     },
+     
     
     
 ]
