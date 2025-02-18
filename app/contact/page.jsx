@@ -23,7 +23,7 @@ const info = [
     {
         icon : <FaMapMarkerAlt/>,
         title : "Address",
-        description: "Muradnagar, Cumilla, Bangladesh" 
+        description: "Narayanganj, Dhaka, Bangladesh" 
     },
 ]
 const ContactPage = () => {

@@ -13,8 +13,10 @@ import {
 import {
   SiFirebase,
   SiMongodb,
+  SiMongoose,
   SiNextdotjs,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
 import { motion } from "framer-motion";
@@ -74,11 +76,11 @@ const experience = {
     {
       company: "Rowshan Ara School",
       position: "Assistant Math Teacher",
-      duration: "2023 - present",
+      duration: "2023 - 2024",
     },
     {
-      company: "Comming soon...",
-      position: "Full-Stuck Developer",
+      company: "Auroraxia",
+      position: "Front end Developer",
       duration: "2024 - present",
     },
   ],
@@ -136,6 +138,10 @@ const skills = {
       name: "JavaScript",
     },
     {
+      icon: <SiTypescript />,
+      name: "TypeScript",
+    },
+    {
       icon: <FaReact />,
       name: "React.js",
     },
@@ -154,6 +160,10 @@ const skills = {
     {
       icon: <SiMongodb />,
       name: "MongoDB",
+    },
+    {
+      icon: <SiMongoose />,
+      name: "Mongoose",
     },
     {
       icon: <SiFirebase />,
