@@ -23,6 +23,7 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import Link from "next/link";
 
 //about
 const about = {
@@ -73,15 +74,19 @@ const experience = {
   description:
     "I am a dedicated web developer specializing in frontend technologies, with extensive experience in React.js and Next.js. My skills also include a solid understanding of MongoDB, Firebase, Express.js, and Node.js, allowing me to create dynamic and efficient web applications.",
   items: [
-    {
-      company: "Rowshan Ara School",
-      position: "Assistant Math Teacher",
-      duration: "2023 - 2024",
-    },
+   
     {
       company: "Auroraxia",
-      position: "Front end Developer",
-      duration: "2024 - present",
+      position: "Front end Developer Intern",
+      duration: "November 2024- April 2025",
+      companyLink: "https://auroraxia.com/"
+    },
+
+     {
+      company: "Autoworx",
+      position: "Front end Developer ",
+      duration: "May 2025 - Present",
+      companyLink: "https://autoworx.tech/"
     },
   ],
 };
@@ -224,7 +229,7 @@ const ResumePage = () => {
                           <h1 className="text-xl max-w-[260px] min-h-[60px] text-center xl:text-left ">{item.position}</h1>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] bg-accent rounded-full"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <Link href={item.companyLink} className="text-white/60 hover:underline">{item.company}</Link>
                           </div>
                         </li>
                       );
